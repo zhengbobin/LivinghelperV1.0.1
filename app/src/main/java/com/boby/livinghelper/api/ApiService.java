@@ -20,4 +20,13 @@ public interface ApiService {
     @GET("app/kaifadaohang/{page}")
     Observable<ExampleEntity> getExampleEntity(@Path("page") String page);
 
+    /**
+     * new api
+     */
+    //新闻头条接口
+    public static final String URL_MAIN_NEWS = "http://v.juhe.cn/toutiao/index";
+    //微信精选接口
+    public static final String URL_MAIN_WECHAT_HANDPICK = "http://v.juhe.cn/weixin/query";
+
+
 }

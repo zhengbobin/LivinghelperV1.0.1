@@ -7,7 +7,7 @@ import com.boby.livinghelper.app.example.entity.ExampleEntity;
 import com.boby.livinghelper.app.example.mvp.contract.ExampleContact;
 import com.boby.livinghelper.app.example.mvp.model.ExampleModel;
 import com.boby.livinghelper.base.BaseApplication;
-import com.boby.livinghelper.util.NetworkUtil;
+import com.boby.livinghelper.util.network.NetworkUtil;
 import rx.Subscriber;
 import rx.Subscription;
 

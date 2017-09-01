@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/colorPrimary">
+
+    <ImageButton
+        android:id="@+id/public_top_bar_left_btn"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="20dp"
+        android:src="@drawable/selector_return"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/public_top_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/public_top_load_pb"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/public_top_bar_title"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/public_top_bar_right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/public_top_bar_right_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/tv_black"
+        android:visibility="visible" />
+
+    <View
+        style="@style/CommonViewLine"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+</RelativeLayout>

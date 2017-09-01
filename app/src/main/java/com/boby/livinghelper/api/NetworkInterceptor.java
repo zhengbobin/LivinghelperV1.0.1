@@ -1,7 +1,7 @@
 package com.boby.livinghelper.api;
 
 import com.boby.livinghelper.base.BaseApplication;
-import com.boby.livinghelper.util.NetworkUtil;
+import com.boby.livinghelper.util.network.NetworkUtil;
 
 import java.io.IOException;
 

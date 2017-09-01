@@ -17,6 +17,7 @@ import java.util.Random;
 
 /**
  * MVP 示例代码
+ * github：https://github.com/zhengbobin/Livinghelper
  *
  * @author zbobin.com
  */

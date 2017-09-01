@@ -1,4 +1,4 @@
-package com.boby.livinghelper.util;
+package com.boby.livinghelper.util.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

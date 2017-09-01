@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_10">10dp</dimen>
+
+    <!-- 控件间隔 -->
+    <dimen name="marge_2">2dp</dimen>
+    <dimen name="marge_5dp">5dp</dimen>
+    <dimen name="marge_10dp">10dp</dimen>
+    <dimen name="marge_15dp">15dp</dimen>
+    <dimen name="marge_20dp">20dp</dimen>
+    <dimen name="marge_60dp">60dp</dimen>
+    <dimen name="marge_70dp">70dp</dimen>
+    <dimen name="marge_80dp">80dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_17">17sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_19">19sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+
 </resources>

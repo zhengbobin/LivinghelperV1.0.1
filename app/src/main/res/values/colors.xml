@@ -3,4 +3,23 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- GridView item 背景色 -->
+    <color name="item_bg_gv">#D5D5D5</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- TextView 字体颜色 深灰色 -->
+    <color name="tv_black">#404040</color>
+    <!-- TextView 字体颜色 浅灰色  -->
+    <color name="tv_black_thin">#989898</color>
+    <!-- activity 背景 -->
+    <color name="activity_bg_color">#fafafa</color>
+    <!-- 分割线 -->
+    <color name="common_line">#eaeaea</color>
+    <!-- 通用背景色 -->
+    <color name="common_bg">#F8F8F8</color>
+
+    <color name="listbg">#f0f0f0</color>
+
 </resources>

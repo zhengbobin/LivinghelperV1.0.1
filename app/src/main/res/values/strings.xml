@@ -1,8 +1,34 @@
 <resources>
     <string name="app_name">Livinghelper</string>
 
+    <string name="network_is_disabled">网络不可用，请检查一下您的网络</string>
     <string name="network_interrupted">网络中断，请检查您的网络状态</string>
     <string name="example_show_request_result">显示请求结果</string>
     <string name="example_request_api">请求接口</string>
+
+    <string name="activity_news">新闻头条</string>
+    <string name="activity_wechat_handpick">微信精选</string>
+    <string name="home_module_3">笑话大全</string>
+    <string name="home_module_4">万年历</string>
+    <string name="home_module_5">在线电影票</string>
+    <string name="home_module_6">电影票房</string>
+    <string name="home_module_7">星座运势</string>
+    <string name="home_module_8">股票数据</string>
+    <string name="home_module_9">问答机器人</string>
+
+    <string name="news_tab0">头条</string>
+    <string name="news_tab1">社会</string>
+    <string name="news_tab2">国内</string>
+    <string name="news_tab3">国际</string>
+    <string name="news_tab4">娱乐</string>
+    <string name="news_tab5">体育</string>
+    <string name="news_tab6">军事</string>
+    <string name="news_tab7">科技</string>
+    <string name="news_tab8">财经</string>
+    <string name="news_tab9">时尚</string>
+
+    <string name="my_save_no_content">暂无相关内容</string>
+    <string name="close">关闭</string>
+    <string name="error_web_parser">网页解析错误！</string>
 
 </resources>

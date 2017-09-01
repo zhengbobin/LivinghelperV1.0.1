@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+	<!-- old -->
+	<!--<item android:drawable="@drawable/refresh_icon03" android:duration="50" />
+	<item android:drawable="@drawable/refresh_icon04" android:duration="50" />
+	<item android:drawable="@drawable/refresh_icon05" android:duration="50" />
+	<item android:drawable="@drawable/refresh_icon06" android:duration="50" />
+	<item android:drawable="@drawable/refresh_icon07" android:duration="50" />-->
+
+	<!-- new -->
+	<item android:drawable="@drawable/pr_3_00001" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00002" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00003" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00004" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00005" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00006" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00007" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00008" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00009" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00010" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00011" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00012" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00013" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00014" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00015" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00016" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00017" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00018" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00019" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00020" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00021" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00022" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00023" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00024" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00025" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00026" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00027" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00028" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00029" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00030" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00031" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00032" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00033" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00034" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00035" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00036" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00037" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00038" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00039" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00040" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00041" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00042" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00043" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00044" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00045" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00046" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00047" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00048" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00049" android:duration="50" />
+	<item android:drawable="@drawable/pr_3_00050" android:duration="50" />
+
+	<item android:drawable="@drawable/pr_3_00051" android:duration="50" />
+
+</animation-list>

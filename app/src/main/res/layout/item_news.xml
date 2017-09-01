@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <!-- 时间 -->
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/common_biankuang_line_gray"
+        android:gravity="center"
+        android:textColor="#ffffff"/>
+
+    <LinearLayout
+        android:padding="1dp"
+        android:id="@+id/linearLayoutNews"
+        android:background="@drawable/background_white_item"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 精选1 -->
+        <LinearLayout
+            android:id="@+id/ll_cn_header_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:gravity="center">
+            <FrameLayout
+                android:id="@+id/fl_cn_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp">
+                <!-- 新闻一 的图片-->
+                <ImageView
+                    android:id="@+id/imageViewImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"/>
+
+                <!-- 新闻一 的标题-->
+                <TextView
+                    android:background="#50000000"
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_gravity="center|bottom"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"/>
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/common_bg"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</LinearLayout>
+

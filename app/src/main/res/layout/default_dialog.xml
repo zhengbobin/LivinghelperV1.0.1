@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/root"
+    android:background="@drawable/tip_dialog_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:id="@+id/textView_title"
+        android:textColor="#000000"
+        />
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/imageView_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <!-- 中间的提示信息 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:minHeight="35dp"
+        android:gravity="center"
+        android:id="@+id/message_layout">
+
+        <TextView
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_message"
+            android:lineSpacingMultiplier="1.1"
+            android:textColor="#99000000"
+            />
+
+    </LinearLayout>
+
+    <!-- 按钮布局 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/relativeLayout_button" >
+
+            <!-- 左边按钮 -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="17sp"
+                android:textColor="@color/tv_black"
+                android:id="@+id/button_left"
+                android:background="@drawable/dialog_button_left_selector"
+                />
+
+            <!-- 右边按钮 -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="17sp"
+                android:textColor="@color/tv_black"
+                android:id="@+id/button_right"
+                android:background="@drawable/dialog_button_right_selector"
+                />
+
+        </LinearLayout>
+
+        <!-- 横线 -->
+        <View
+            android:layout_width="fill_parent"
+            android:background="#20000000"
+            android:layout_height="0.2dp"/>
+
+        <!-- 竖线 -->
+        <View
+            android:id="@+id/view_vertical_line"
+            android:layout_width="0.2dp"
+            android:background="#20000000"
+            android:layout_centerInParent="true"
+            android:layout_height="fill_parent"/>
+
+    </RelativeLayout>
+</LinearLayout>

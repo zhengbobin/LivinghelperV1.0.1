@@ -8,4 +8,31 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 公共水平线 -->
+    <style name="CommonViewLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/common_line</item>
+    </style>
+
+    <!-- TabLayout -->
+    <style name="MyTabLayoutAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <!-- 对话框 -->
+    <style name="TipDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/MyDialogAnim</item>
+    </style>
+    <style name="MyDialogAnim">
+        <item name="android:windowEnterAnimation">@anim/tip_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/tip_dialog_out</item>
+    </style>
+
+    <style name="ProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 </resources>
