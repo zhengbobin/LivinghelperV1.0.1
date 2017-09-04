@@ -10,14 +10,12 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.boby.livinghelper.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
-
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,7 +40,7 @@ public class ImageLoaderUtil {
 			loader = new ImageLoaderUtil();
 
 		} else {
-            loader.init(R.mipmap.ic_launcher);
+            loader.init(R.mipmap.icon_default);
         }
 
 		return loader;
@@ -64,7 +62,7 @@ public class ImageLoaderUtil {
 	}
 
     public ImageLoaderUtil() {
-        init(R.mipmap.ic_launcher);
+        init(R.mipmap.icon_default);
     }
 
     private void init(int defaultIconResId) {

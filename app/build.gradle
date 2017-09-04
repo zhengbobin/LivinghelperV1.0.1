@@ -7,8 +7,8 @@ android {
         applicationId "com.boby.livinghelper.debug"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 1000
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -46,4 +46,7 @@ dependencies {
     compile project(path: ':baselibs:PullToRefresh_library')
     implementation files('libs/universal-image-loader-1.9.1-with-sources.jar')
     compile 'com.loopj.android:android-async-http:1.4.9'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.0
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+
 }

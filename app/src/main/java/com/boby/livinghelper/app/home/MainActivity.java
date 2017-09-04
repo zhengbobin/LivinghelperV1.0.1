@@ -1,13 +1,10 @@
 package com.boby.livinghelper.app.home;
-
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-
 import com.boby.livinghelper.R;
 import com.boby.livinghelper.app.home.adapter.MainGridViewAdapter;
 import com.boby.livinghelper.app.news.NewsActivity;
@@ -17,7 +14,6 @@ import com.boby.livinghelper.base.BaseActivity;
 import com.boby.livinghelper.base.BasePresenter;
 import com.boby.livinghelper.util.ToastUtil;
 import com.boby.livinghelper.widget.MyGridView;
-
 
 /**
  * 首页

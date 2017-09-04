@@ -6,6 +6,7 @@
     android:paddingBottom="@dimen/marge_20dp"
     android:paddingTop="@dimen/marge_15dp"
     >
+
     <ImageView
         android:id="@+id/imageView_icon"
         android:layout_width="@dimen/marge_60dp"
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView_icon"
         android:text="Item"
-        android:textColor="@color/tv_black"
+        android:textColor="@color/common_text_gray_dark"
         android:textSize="@dimen/font_size_14"
         android:layout_centerHorizontal="true"
         />

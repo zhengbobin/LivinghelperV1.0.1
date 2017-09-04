@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:background="@color/white"
-        app:tabTextColor="@color/tv_black"
+        app:tabTextColor="@color/common_text_gray_thin"
         app:tabSelectedTextColor="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorPrimary" />
 

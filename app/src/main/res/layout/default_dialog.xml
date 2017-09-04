@@ -68,7 +68,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="17sp"
-                android:textColor="@color/tv_black"
+                android:textColor="@color/common_text_gray_dark"
                 android:id="@+id/button_left"
                 android:background="@drawable/dialog_button_left_selector"
                 />
@@ -79,7 +79,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textSize="17sp"
-                android:textColor="@color/tv_black"
+                android:textColor="@color/common_text_gray_dark"
                 android:id="@+id/button_right"
                 android:background="@drawable/dialog_button_right_selector"
                 />

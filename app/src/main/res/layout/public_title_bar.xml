@@ -54,11 +54,12 @@
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:padding="10dp"
-        android:textColor="@color/tv_black"
+        android:textColor="@color/common_text_gray_dark"
         android:visibility="visible" />
 
     <View
         style="@style/CommonViewLine"
         android:layout_alignParentBottom="true"
         android:visibility="gone"/>
+
 </RelativeLayout>

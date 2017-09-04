@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.boby.livinghelper.app.wechatHandpick.WechatHandpickActivity">
+    android:background="@color/common_bg"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <include
+        android:id="@+id/top_rl"
+        layout="@layout/public_title_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listView_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_parent"
+        android:layout_below="@+id/top_rl"
+        android:clickable="false"
+        android:divider="@null"
+        android:listSelector="@color/white"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

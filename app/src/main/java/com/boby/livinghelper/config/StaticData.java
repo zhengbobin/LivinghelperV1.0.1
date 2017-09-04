@@ -14,11 +14,15 @@ public class StaticData {
     public static String KEY_VALUE_WECHAT_HANDPICK = "d61d7989945cbfabc4c638b45859d192";
     /** -----------------  jUHE KEY  ----------------------- */
 
+    // Bugly APP_ID
+    public static final String BUGLY_APP_ID = "c97ee7b6f5";
+
+    /** ------------------------------------- */
     public static final String TYPE = "type";
     public static final String TYPES = "types";
-    //webView 标题
+    // webView 标题
     public static final String WEBVIEW_TITLE = "webView_title";
-    //webView url
+    // webView url
     public static final String WEBVIEW_URL = "webView_url";
     // CommonWebViewActivity
     public static final String WEB_INTENT_ENTITY = "webIntentEntity";

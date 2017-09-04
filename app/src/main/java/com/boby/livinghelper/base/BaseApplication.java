@@ -2,11 +2,12 @@ package com.boby.livinghelper.base;
 
 import android.app.Application;
 import android.graphics.Bitmap;
-
 import com.boby.livinghelper.R;
+import com.boby.livinghelper.config.StaticData;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.tencent.bugly.Bugly;
 
 /**
  * 自定义 Application
@@ -26,6 +27,8 @@ public class BaseApplication extends Application {
         super.onCreate();
         mContext = this;
         initImagLoader();
+        // Bugly SDK初始化
+        Bugly.init(getApplicationContext(), StaticData.BUGLY_APP_ID, false);//true:启动Debug，false：关闭Debug
     }
 
     public static BaseApplication getContext() {
@@ -39,9 +42,9 @@ public class BaseApplication extends Application {
         imgLoader = ImageLoader.getInstance();
         imgLoader.init(ImageLoaderConfiguration.createDefault(this));
         options = new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.mipmap.ic_launcher)
-                .showImageForEmptyUri(R.mipmap.ic_launcher)
-                .showImageOnFail(R.mipmap.ic_launcher)
+                .showImageOnLoading(R.mipmap.icon_default)
+                .showImageForEmptyUri(R.mipmap.icon_default)
+                .showImageOnFail(R.mipmap.icon_default)
                 .cacheInMemory(true).cacheOnDisc(true).considerExifParams(true)
                 .bitmapConfig(Bitmap.Config.RGB_565).build();
     }

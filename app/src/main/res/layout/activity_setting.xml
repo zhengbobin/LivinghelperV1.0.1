@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.boby.livinghelper.app.setting.SettingActivity">
+    android:background="@color/listbg"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/public_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 应用更新 -->
+            <RelativeLayout
+                android:id="@+id/view_messageTip"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/selector_local_listview">
+
+                <TextView
+                    style="@style/MineItemTextView"
+                    android:drawableLeft="@mipmap/icon_update"
+                    android:text="应用更新" />
+
+                <TextView
+                    android:id="@+id/textView_newest_v_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/textView"
+                    android:text=""
+                    android:textColor="@color/common_text_gray_thin" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/MineItemTextViewArrow" />
+            </RelativeLayout>
+
+            <View style="@style/CommonViewLine" />
+
+            <RelativeLayout
+                android:id="@+id/view_about"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_local_listview">
+
+                <TextView
+                    style="@style/MineItemTextView"
+                    android:drawableLeft="@mipmap/icon_about"
+                    android:text="关于" />
+
+                <TextView style="@style/MineItemTextViewArrow" />
+            </RelativeLayout>
+
+            <View style="@style/CommonViewLine" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

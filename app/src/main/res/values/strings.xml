@@ -1,6 +1,20 @@
 <resources>
-    <string name="app_name">Livinghelper</string>
+    <string name="app_name">生活小助手</string>
+    <!--  >>>>>>>>>>>>>>>>>> 设置 <<<<<<<<<<<<<<<<<<<<< -->
+    <string name="xiaoquguanjia">生活小助手 · 生活好帮手</string>
+    <string name="about_app_version">生活小助手1.0</string>
+    <string name="version_num">生活小助手 </string>
+    <string name="activity_about_software">关于本软件：</string>
+    <string name="activity_about_software_detail">本软件是一款免费的生活工具，旨在为大家的生活提供便利。软件包含了新闻头条、微信精选、笑话大全、万年历、在线电影院、在线票房、星座运势、股票数据、问答机器人等几大功能，均采用网络最新数据，因此需要联网操作。\n最后，感谢使用生活小助手工具，也欢迎提出改进建议，谢谢！</string>
+    <string name="activity_contact_way">联系方式：</string>
+    <string name="activity_contact_way_detail">123500734@qq.com</string>
+    <string name="our_company">chaoshanquan studio</string>
+    <string name="our_company_url">www.xiaoquguanjia.cn</string>
+    <string name="biaoshi">Copyright @ 2017 All Right Reserved</string>
+    <!--  >>>>>>>>>>>>>>>>>> 设置 <<<<<<<<<<<<<<<<<<<<<<<< -->
 
+
+    <!-- ///////////////////////////// -->
     <string name="network_is_disabled">网络不可用，请检查一下您的网络</string>
     <string name="network_interrupted">网络中断，请检查您的网络状态</string>
     <string name="example_show_request_result">显示请求结果</string>
@@ -30,5 +44,8 @@
     <string name="my_save_no_content">暂无相关内容</string>
     <string name="close">关闭</string>
     <string name="error_web_parser">网页解析错误！</string>
+
+
+
 
 </resources>
