@@ -45,7 +45,7 @@
     <string name="close">关闭</string>
     <string name="error_web_parser">网页解析错误！</string>
 
-
+    <string name="send">发送</string>
 
 
 </resources>

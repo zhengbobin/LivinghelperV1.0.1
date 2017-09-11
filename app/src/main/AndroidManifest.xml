@@ -43,6 +43,7 @@
         <activity
             android:name=".app.home.MainActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".app.setting.SettingActivity"
             android:screenOrientation="portrait"
@@ -59,7 +60,12 @@
             android:name=".app.wechatHandpick.WechatHandpickActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".app.setting.AboutUsActivity"
+        <activity
+            android:name=".app.setting.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.qarobot.QARobotActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>

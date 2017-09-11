@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import com.boby.livinghelper.R;
 import com.boby.livinghelper.app.home.adapter.MainGridViewAdapter;
 import com.boby.livinghelper.app.news.NewsActivity;
+import com.boby.livinghelper.app.qarobot.QARobotActivity;
 import com.boby.livinghelper.app.setting.SettingActivity;
 import com.boby.livinghelper.app.wechatHandpick.WechatHandpickActivity;
 import com.boby.livinghelper.base.BaseActivity;
@@ -105,7 +106,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 ToastUtil.showMessage(this, "正在开发中，敬请期待~");
                 break;
             case "问答机器人":
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, QARobotActivity.class);
+                startActivity(intent);
                 break;
         }
     }
