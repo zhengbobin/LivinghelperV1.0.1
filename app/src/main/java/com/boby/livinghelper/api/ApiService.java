@@ -1,6 +1,7 @@
 package com.boby.livinghelper.api;
 
 import com.boby.livinghelper.app.example.entity.ExampleEntity;
+import com.boby.livinghelper.app.home.entity.MainEntity;
 
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -19,6 +20,10 @@ public interface ApiService {
 
     @GET("app/kaifadaohang/{page}")
     Observable<ExampleEntity> getExampleEntity(@Path("page") String page);
+
+    //首页模块
+    @GET("app/livinghelper/{page}")
+    Observable<MainEntity> getMainEntity(@Path("page") String page);
 
     /**
      * new api
