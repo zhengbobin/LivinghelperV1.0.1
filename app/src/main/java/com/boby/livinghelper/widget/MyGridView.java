@@ -34,6 +34,8 @@ public class MyGridView extends GridView{
         super.dispatchDraw(canvas);
 
         View localView1 = getChildAt(0);
+        if (localView1 == null)
+            return;
         int column = getWidth() / localView1.getWidth();
         int childCount = getChildCount();
         Paint localPaint;

@@ -1,4 +1,4 @@
-package com.boby.livinghelper.app.wechatHandpick.adapter;
+package com.boby.livinghelper.app.wechathandpick.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.boby.livinghelper.R;
-import com.boby.livinghelper.app.wechatHandpick.entity.WechatHandpickEntity;
+import com.boby.livinghelper.app.wechathandpick.entity.WechatHandpickEntity;
 import com.boby.livinghelper.util.ImageLoaderUtil;
 import java.util.ArrayList;
 

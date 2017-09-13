@@ -57,7 +57,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".app.wechatHandpick.WechatHandpickActivity"
+            android:name=".app.wechathandpick.WechatHandpickActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity

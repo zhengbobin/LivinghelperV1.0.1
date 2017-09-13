@@ -1,4 +1,4 @@
-package com.boby.livinghelper.app.wechatHandpick.entity;
+package com.boby.livinghelper.app.wechathandpick.entity;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.boby.livinghelper.app.wechatHandpick.entity;
+package com.boby.livinghelper.app.wechathandpick.entity;
 
 import com.boby.livinghelper.app.common.entity.MessageResponseEntity;
 import com.boby.livinghelper.util.GsonUtils;

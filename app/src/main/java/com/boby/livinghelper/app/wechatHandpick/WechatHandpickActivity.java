@@ -1,4 +1,4 @@
-package com.boby.livinghelper.app.wechatHandpick;
+package com.boby.livinghelper.app.wechathandpick;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import com.boby.livinghelper.R;
 import com.boby.livinghelper.api.ApiService;
 import com.boby.livinghelper.app.common.CommonWebViewActivity;
 import com.boby.livinghelper.app.common.entity.WebIntentEntity;
-import com.boby.livinghelper.app.wechatHandpick.adapter.WechatHandpickAdapter;
-import com.boby.livinghelper.app.wechatHandpick.entity.WechatHandpickEntity;
-import com.boby.livinghelper.app.wechatHandpick.entity.WechatHandpickListEntity;
-import com.boby.livinghelper.app.wechatHandpick.entity.WechatHandpickListResponseEntity;
+import com.boby.livinghelper.app.wechathandpick.adapter.WechatHandpickAdapter;
+import com.boby.livinghelper.app.wechathandpick.entity.WechatHandpickEntity;
+import com.boby.livinghelper.app.wechathandpick.entity.WechatHandpickListEntity;
+import com.boby.livinghelper.app.wechathandpick.entity.WechatHandpickListResponseEntity;
 import com.boby.livinghelper.base.BaseActivity;
 import com.boby.livinghelper.base.BasePresenter;
 import com.boby.livinghelper.config.StaticData;

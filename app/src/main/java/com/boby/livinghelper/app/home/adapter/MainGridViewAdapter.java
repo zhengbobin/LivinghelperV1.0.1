@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.boby.livinghelper.R;
+import com.boby.livinghelper.app.home.entity.MainEntity;
+import com.boby.livinghelper.util.ImageLoaderUtil;
 import com.boby.livinghelper.widget.SparseViewHolder;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * desc
@@ -21,25 +24,23 @@ import com.boby.livinghelper.widget.SparseViewHolder;
 public class MainGridViewAdapter extends BaseAdapter {
 
     private Context context;
-    private String[] strName;
     private LayoutInflater inflater;
-    private int[] drawableId;
+    private ArrayList<MainEntity> mainEntities;
 
-    public MainGridViewAdapter(Context context,String[] strName,int[] drawableId) {
+    public MainGridViewAdapter(Context context,ArrayList<MainEntity> mainEntities) {
         this.context = context;
-        this.strName=strName;
-        this.drawableId=drawableId;
+        this.mainEntities=mainEntities;
         inflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return strName.length;
+        return mainEntities==null?0:mainEntities.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return strName[i];
+        return mainEntities;
     }
 
     @Override
@@ -49,11 +50,15 @@ public class MainGridViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view=inflater.inflate(R.layout.item_main_gridview, viewGroup, false);
-        ImageView imageViewIcon= SparseViewHolder.getView(view, R.id.imageView_icon);
-        TextView textViewName=SparseViewHolder.getView(view, R.id.textView_name);
-        imageViewIcon.setImageDrawable(context.getResources().getDrawable(drawableId[i]));
-        textViewName.setText(strName[i]);
+        try {
+            view=inflater.inflate(R.layout.item_main_gridview, viewGroup, false);
+            ImageView imageViewIcon= SparseViewHolder.getView(view, R.id.imageView_icon);
+            TextView textViewName=SparseViewHolder.getView(view, R.id.textView_name);
+            ImageLoaderUtil.getInstance().loadImage(imageViewIcon, mainEntities.get(i).getMain_img());
+            textViewName.setText(mainEntities.get(i).getMain_name());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return view;
     }
 

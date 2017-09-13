@@ -8,6 +8,9 @@ package com.boby.livinghelper.config;
 
 public class StaticData {
 
+    public static final String STATUS_SUCCESS_200 = "200";
+    public static final String STATUS_FAIL_401 = "401";
+
     /** -----------------  jUHE KEY  ----------------------- */
     public static String KEY = "key";
     public static String KEY_VALUE_NEWS = "9009fc2f20ebfce5849a70dfee7bd88e";
