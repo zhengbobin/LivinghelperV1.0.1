@@ -16,7 +16,7 @@ import android.view.View;
  * @date 2017/8/28.
  */
 
-public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
+public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements View.OnClickListener {
 
     protected Activity activity = this;
     protected P mPresenter;

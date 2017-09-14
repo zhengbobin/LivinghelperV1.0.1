@@ -54,7 +54,7 @@ public class MainGridViewAdapter extends BaseAdapter {
             view=inflater.inflate(R.layout.item_main_gridview, viewGroup, false);
             ImageView imageViewIcon= SparseViewHolder.getView(view, R.id.imageView_icon);
             TextView textViewName=SparseViewHolder.getView(view, R.id.textView_name);
-            ImageLoaderUtil.getInstance().loadImage(imageViewIcon, mainEntities.get(i).getMain_img());
+            ImageLoaderUtil.getInstance(R.mipmap.icon_1).loadImage(imageViewIcon, mainEntities.get(i).getMain_img());
             textViewName.setText(mainEntities.get(i).getMain_name());
         } catch (Exception e) {
             e.printStackTrace();

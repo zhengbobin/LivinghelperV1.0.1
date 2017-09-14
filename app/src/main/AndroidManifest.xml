@@ -43,7 +43,6 @@
         <activity
             android:name=".app.home.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".app.setting.SettingActivity"
             android:screenOrientation="portrait"
@@ -66,6 +65,30 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".app.qarobot.QARobotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.boxoffice.BoxOfficeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.calendar.CalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.horoscope.HoroscopeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.joke.JokeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.movie.MovieActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".app.stock.StockActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>

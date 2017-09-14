@@ -1,15 +1,12 @@
 package com.boby.livinghelper.app.home;
 
-import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
 import com.boby.livinghelper.R;
 import com.boby.livinghelper.base.BaseActivity;
 import com.boby.livinghelper.base.BasePresenter;
 import com.boby.livinghelper.rx.RxSchedulers;
-
 import java.util.concurrent.TimeUnit;
-
 import rx.Observable;
 
 /**
@@ -38,5 +35,10 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected BasePresenter onCreatePresenter() {
         return null;
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

@@ -6,6 +6,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import com.boby.livinghelper.R;
+import com.boby.livinghelper.app.boxoffice.BoxOfficeActivity;
+import com.boby.livinghelper.app.calendar.CalendarActivity;
 import com.boby.livinghelper.app.common.CommonWebViewActivity;
 import com.boby.livinghelper.app.common.entity.WebIntentEntity;
 import com.boby.livinghelper.app.home.adapter.MainGridViewAdapter;
@@ -13,9 +15,13 @@ import com.boby.livinghelper.app.home.entity.MainEntity;
 import com.boby.livinghelper.app.home.entity.MainResponseEntity;
 import com.boby.livinghelper.app.home.mvp.contract.MainContact;
 import com.boby.livinghelper.app.home.mvp.presenter.MainPresenter;
+import com.boby.livinghelper.app.horoscope.HoroscopeActivity;
+import com.boby.livinghelper.app.joke.JokeActivity;
+import com.boby.livinghelper.app.movie.MovieActivity;
 import com.boby.livinghelper.app.news.NewsActivity;
 import com.boby.livinghelper.app.qarobot.QARobotActivity;
 import com.boby.livinghelper.app.setting.SettingActivity;
+import com.boby.livinghelper.app.stock.StockActivity;
 import com.boby.livinghelper.app.wechathandpick.WechatHandpickActivity;
 import com.boby.livinghelper.base.BaseActivity;
 import com.boby.livinghelper.config.MainActityModuleType;
@@ -103,32 +109,38 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
 
             // 笑话大全
             case MainActityModuleType.TYPE_JOKE:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, JokeActivity.class);
+                startActivity(intent);
                 break;
 
             // 万年历
             case MainActityModuleType.TYPE_CALENDAR:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, CalendarActivity.class);
+                startActivity(intent);
                 break;
 
             // 在线电影票
             case MainActityModuleType.TYPE_MOVIE:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, MovieActivity.class);
+                startActivity(intent);
                 break;
 
             // 电影票房
             case MainActityModuleType.TYPE_BOX_OFFICE:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, BoxOfficeActivity.class);
+                startActivity(intent);
                 break;
 
             // 星座运势
             case MainActityModuleType.TYPE_HOROSCOPE:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, HoroscopeActivity.class);
+                startActivity(intent);
                 break;
 
             // 股票数据
             case MainActityModuleType.TYPE_STOCK:
-                ToastUtil.showMessage(this, "正在开发中，敬请期待~");
+                intent = new Intent(this, StockActivity.class);
+                startActivity(intent);
                 break;
 
             // 问答机器人
@@ -140,7 +152,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
             default:
                 intent = new Intent(this, CommonWebViewActivity.class);
                 intent.putExtra(StaticData.IS_HIDE_PANEL, true);
-                intent.putExtra(StaticData.WEB_INTENT_ENTITY, new WebIntentEntity(mainEntity.getMain_url(), mainEntity.getMain_url()));
+                intent.putExtra(StaticData.WEB_INTENT_ENTITY, new WebIntentEntity(mainEntity.getMain_url(), mainEntity.getMain_name()));
                 startActivityForResult(intent, NewsActivity.CODE_NEWS_DETAIL);
                 break;
         }
@@ -184,5 +196,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
         if (loadDialog != null && loadDialog.isShowing()) {
             loadDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

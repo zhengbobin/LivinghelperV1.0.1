@@ -85,4 +85,9 @@ public class ExampleActivity extends BaseActivity<ExamplePresenter>
     public void hideDialog() {
         mDialog.dismiss();
     }
+
+    @Override
+    public void onClick(View view) {
+
+    }
 }

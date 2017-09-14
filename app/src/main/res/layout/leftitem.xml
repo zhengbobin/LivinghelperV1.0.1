@@ -23,6 +23,7 @@
         android:layout_marginRight="10dp"
         android:textColor="@color/common_text_gray_dark"
         android:textSize="@dimen/font_size_16"
+        android:textIsSelectable="true"
         />
 
 </RelativeLayout>

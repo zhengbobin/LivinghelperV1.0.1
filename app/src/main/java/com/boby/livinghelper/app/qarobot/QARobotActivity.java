@@ -1,7 +1,6 @@
 package com.boby.livinghelper.app.qarobot;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,16 +8,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.boby.livinghelper.R;
 import com.boby.livinghelper.app.qarobot.adapter.TextAdapter;
 import com.boby.livinghelper.app.qarobot.entity.ListData;
 import com.boby.livinghelper.app.qarobot.util.HttpData;
 import com.boby.livinghelper.app.qarobot.util.HttpGetDataListener;
-
+import com.boby.livinghelper.base.BaseActivity;
+import com.boby.livinghelper.base.BasePresenter;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,7 @@ import java.util.List;
  *
  * @author zbobin.com
  */
-public class QARobotActivity extends AppCompatActivity implements HttpGetDataListener,View.OnClickListener {
+public class QARobotActivity extends BaseActivity implements HttpGetDataListener,View.OnClickListener {
 
     private ImageButton btnBack;
     private TextView tvTitle;
@@ -47,11 +45,16 @@ public class QARobotActivity extends AppCompatActivity implements HttpGetDataLis
         initView();
     }
 
+    @Override
+    protected BasePresenter onCreatePresenter() {
+        return null;
+    }
+
     private void initView() {
         btnBack = (ImageButton) findViewById(R.id.public_top_bar_left_btn);
         btnBack.setOnClickListener(this);
         tvTitle = (TextView) findViewById(R.id.public_top_bar_title);
-        tvTitle.setText(R.string.home_module_9);
+        tvTitle.setText(R.string.activity_qarobot);
 
         lv = (ListView) findViewById(R.id.lv);
         sendText = (EditText) findViewById(R.id.sendText);

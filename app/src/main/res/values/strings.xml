@@ -22,13 +22,13 @@
 
     <string name="activity_news">新闻头条</string>
     <string name="activity_wechat_handpick">微信精选</string>
-    <string name="home_module_3">笑话大全</string>
-    <string name="home_module_4">万年历</string>
-    <string name="home_module_5">在线电影票</string>
-    <string name="home_module_6">电影票房</string>
-    <string name="home_module_7">星座运势</string>
-    <string name="home_module_8">股票数据</string>
-    <string name="home_module_9">问答机器人</string>
+    <string name="activity_joke">笑话大全</string>
+    <string name="activity_calendar">万年历</string>
+    <string name="activity_movie">在线电影票</string>
+    <string name="activity_box_office">电影票房</string>
+    <string name="activity_horoscope">星座运势</string>
+    <string name="activity_stock">股票数据</string>
+    <string name="activity_qarobot">问答机器人</string>
 
     <string name="news_tab0">头条</string>
     <string name="news_tab1">社会</string>
