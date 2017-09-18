@@ -46,6 +46,8 @@
     <string name="error_web_parser">网页解析错误！</string>
 
     <string name="send">发送</string>
+    <string name="no_data">暂无数据</string>
+    <string name="no_more_data">无更多数据</string>
 
 
 </resources>

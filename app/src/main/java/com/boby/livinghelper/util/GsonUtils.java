@@ -39,7 +39,7 @@ public final class GsonUtils {
 	}
 
 	/**
-	 * 将对象转为JSON字符串
+	 * 将JSON字符串转为对象
 	 */
 	public static Object jsonToObject(String json,Class<?> clz) throws JSONException {
 		Gson gson = new Gson();

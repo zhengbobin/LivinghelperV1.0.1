@@ -13,8 +13,10 @@ public class StaticData {
 
     /** -----------------  jUHE KEY  ----------------------- */
     public static String KEY = "key";
-    public static String KEY_VALUE_NEWS = "9009fc2f20ebfce5849a70dfee7bd88e";
-    public static String KEY_VALUE_WECHAT_HANDPICK = "d61d7989945cbfabc4c638b45859d192";
+    public static String KEY_VALUE_NEWS = "9009fc2f20ebfce5849a70dfee7bd88e";//新闻头条
+    public static String KEY_VALUE_WECHAT_HANDPICK = "d61d7989945cbfabc4c638b45859d192";//微信精选
+    public static String KEY_VALUE_JOKE = "1067c34a4c1184e6547e71a16d49e575";//笑话大全
+
     /** -----------------  jUHE KEY  ----------------------- */
 
     // Bugly APP_ID

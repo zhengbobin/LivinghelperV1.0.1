@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.boby.livinghelper.R;
 import com.boby.livinghelper.api.ApiService;
 import com.boby.livinghelper.app.news.adapter.NewsPageAdapter;
@@ -108,7 +107,7 @@ public class NewsActivity extends BaseActivity
 
     public void getData() {
         RequestParams params = new RequestParams();
-        params.put("key", "9009fc2f20ebfce5849a70dfee7bd88e");
+        params.put(StaticData.KEY, StaticData.KEY_VALUE_NEWS);
         params.put("type", "");
         HttpUtils.post(NewsActivity.this, ApiService.URL_MAIN_NEWS, params, new TextHttpResponseHandler() {
             @Override

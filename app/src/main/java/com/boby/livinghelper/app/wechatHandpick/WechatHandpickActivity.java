@@ -120,7 +120,7 @@ public class WechatHandpickActivity extends BaseActivity implements View.OnClick
                                     if (mPulltorefresh.isRefreshing()) {
                                         mPulltorefresh.onRefreshComplete();
                                     }
-                                    ToastUtil.showMessage(getApplication(), "无更多数据");
+                                    ToastUtil.showMessage(getApplication(), R.string.no_more_data);
                                 } else {
                                     if (page == 1) {
                                         if (arraylist == null)
@@ -137,9 +137,9 @@ public class WechatHandpickActivity extends BaseActivity implements View.OnClick
                                         arraylist.clear();
                                         adapter.notifyDataSetChanged();
                                     }
-                                    ToastUtil.showMessage(getApplication(), "暂无数据");
+                                    ToastUtil.showMessage(getApplication(), R.string.no_data);
                                 } else {
-                                    ToastUtil.showMessage(getApplication(), "暂无数据");
+                                    ToastUtil.showMessage(getApplication(), R.string.no_data);
                                 }
                             }
                         } catch (Exception e) {}
