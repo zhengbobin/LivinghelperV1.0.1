@@ -1,7 +1,6 @@
 package com.boby.livinghelper.api;
 
 import com.boby.livinghelper.app.example.entity.ExampleEntity;
-import com.boby.livinghelper.app.home.entity.MainEntity;
 import com.boby.livinghelper.app.home.entity.MainResponseEntity;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -34,5 +33,7 @@ public interface ApiService {
     public static final String URL_MAIN_WECHAT_HANDPICK = "http://v.juhe.cn/weixin/query";
     //笑话大全接口
     public static final String URL_MAIN_JOKE = "http://japi.juhe.cn/joke/content/list.from";
+    //万年历
+    public static final String URL_MAIN_CALENDAR = "http://v.juhe.cn/calendar/day";
 
 }
