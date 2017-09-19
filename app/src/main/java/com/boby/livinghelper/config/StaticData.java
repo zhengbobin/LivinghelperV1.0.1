@@ -17,6 +17,9 @@ public class StaticData {
     public static String KEY_VALUE_WECHAT_HANDPICK = "d61d7989945cbfabc4c638b45859d192";//微信精选
     public static String KEY_VALUE_JOKE = "1067c34a4c1184e6547e71a16d49e575";//笑话大全
     public static String KEY_VALUE_CALENDAR = "c283448e6bc904f864bf2f01fadc3206";//万年历
+    public static String KEY_VALUE_MOVIE = "f644013f8513b63d4661df9c76ee5029";// H5在线电影票
+    public static String KEY_VALUE_HOROSCOPE = "73dbb88741dd792ef0b2caadfb0a28a1";// 星座运势
+    public static String KEY_VALUE_STOCK = "71c4e0fb069d476877849c431c54083c";// 股票数据
 
     /** -----------------  jUHE KEY  ----------------------- */
 

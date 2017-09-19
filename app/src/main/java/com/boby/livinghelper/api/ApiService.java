@@ -35,5 +35,11 @@ public interface ApiService {
     public static final String URL_MAIN_JOKE = "http://japi.juhe.cn/joke/content/list.from";
     //万年历
     public static final String URL_MAIN_CALENDAR = "http://v.juhe.cn/calendar/day";
+    //H5在线电影票
+    public static final String URL_MAIN_MOVIE = "http://v.juhe.cn/wepiao/query";
+    //星座运势
+    public static final String URL_MAIN_HOROSCOPE = "http://web.juhe.cn:8080/constellation/getAll";
+    //股票数据
+    public static final String URL_MAIN_STOCK = "http://web.juhe.cn:8080/finance/stock/hs";
 
 }

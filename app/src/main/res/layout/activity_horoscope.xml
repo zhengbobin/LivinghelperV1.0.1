@@ -9,16 +9,382 @@
         android:id="@+id/top_rl"
         layout="@layout/public_title_bar" />
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/listView_history"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/rg_parent"
-        android:layout_below="@+id/top_rl"
-        android:clickable="false"
-        android:divider="@null"
-        android:listSelector="@color/white"
-        android:scrollbars="none"
-        android:smoothScrollbar="true" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 星座名称 -->
+            <LinearLayout
+                android:id="@+id/linearLayoutName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_red_normal"
+                    android:textStyle="bold"
+                    android:text="【星座名称】  点击选择后自动查询"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="双子座"/>
+            </LinearLayout>
+
+            <!-- 日期 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【日期】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewDatetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 综合指数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【综合指数】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewLunarAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 幸运色 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【幸运色】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 健康指数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【健康指数】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 爱情指数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【爱情指数】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewLove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 财运指数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【财运指数】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 幸运数字 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【幸运数字】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 速配星座 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【速配星座】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewQFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 今日概述 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【今日概述】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+            <!-- 工作指数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marge_10dp"
+                android:layout_marginBottom="@dimen/marge_10dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textStyle="bold"
+                    android:text="【工作指数】"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_line" />
+                <TextView
+                    android:id="@+id/textViewWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:text="--"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

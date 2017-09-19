@@ -49,5 +49,7 @@
     <string name="no_data">暂无数据</string>
     <string name="no_more_data">无更多数据</string>
 
+    <string name="stock_gid_hint">股票编号,深圳股市以sz开头,如:sz000001</string>
+
 
 </resources>

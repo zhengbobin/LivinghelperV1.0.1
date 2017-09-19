@@ -90,7 +90,8 @@
         <activity
             android:name=".app.stock.StockActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateVisible" />
     </application>
 
 </manifest>

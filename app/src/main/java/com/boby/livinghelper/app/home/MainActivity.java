@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import com.boby.livinghelper.R;
+import com.boby.livinghelper.api.ApiService;
 import com.boby.livinghelper.app.boxoffice.BoxOfficeActivity;
 import com.boby.livinghelper.app.calendar.CalendarActivity;
 import com.boby.livinghelper.app.common.CommonWebViewActivity;
@@ -18,6 +19,7 @@ import com.boby.livinghelper.app.home.mvp.presenter.MainPresenter;
 import com.boby.livinghelper.app.horoscope.HoroscopeActivity;
 import com.boby.livinghelper.app.joke.JokeActivity;
 import com.boby.livinghelper.app.movie.MovieActivity;
+import com.boby.livinghelper.app.movie.entity.MovieResponseEntity;
 import com.boby.livinghelper.app.news.NewsActivity;
 import com.boby.livinghelper.app.qarobot.QARobotActivity;
 import com.boby.livinghelper.app.setting.SettingActivity;
@@ -26,10 +28,17 @@ import com.boby.livinghelper.app.wechathandpick.WechatHandpickActivity;
 import com.boby.livinghelper.base.BaseActivity;
 import com.boby.livinghelper.config.MainActityModuleType;
 import com.boby.livinghelper.config.StaticData;
+import com.boby.livinghelper.util.LogUtil;
 import com.boby.livinghelper.util.ToastUtil;
+import com.boby.livinghelper.util.network.HttpUtils;
 import com.boby.livinghelper.widget.LoadDialog;
 import com.boby.livinghelper.widget.MyGridView;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.TextHttpResponseHandler;
+
 import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.Header;
 
 /**
  * 首页
@@ -121,8 +130,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
 
             // 在线电影票
             case MainActityModuleType.TYPE_MOVIE:
-                intent = new Intent(this, MovieActivity.class);
-                startActivity(intent);
+                getMovieData();
                 break;
 
             // 电影票房
@@ -201,5 +209,40 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
     @Override
     public void onClick(View view) {
 
+    }
+
+    public void getMovieData() {
+        RequestParams params = new RequestParams();
+        params.put(StaticData.KEY, StaticData.KEY_VALUE_MOVIE);
+        HttpUtils.post(MainActivity.this, ApiService.URL_MAIN_MOVIE, params, new TextHttpResponseHandler() {
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                ToastUtil.showMessage(getApplication(), "请求数据失败，请重试!");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String arg0) {
+                try {
+                    LogUtil.e("MovieActivity", arg0);
+                    MovieResponseEntity response = MovieResponseEntity.getIntance(arg0);
+                    if (response == null)
+                        return;
+
+                    if (response.getError_code().equals("0")) {
+                        if (response.getResult() != null) {
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, CommonWebViewActivity.class);
+                            intent.putExtra(StaticData.IS_HIDE_PANEL, true);
+                            intent.putExtra(StaticData.WEB_INTENT_ENTITY, new WebIntentEntity(response.getResult().getH5url(), getString(R.string.activity_movie)));
+                            startActivity(intent);
+                        }
+                    } else {
+                        ToastUtil.showMessage(MainActivity.this, R.string.no_data);
+                    }
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

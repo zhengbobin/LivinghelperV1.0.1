@@ -5,6 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <!-- GridView item 背景色 -->
     <color name="item_bg_gv">#D5D5D5</color>
+    <!-- 红色 -->
+    <color name="common_red_normal">#ff5a5f</color>
+    <color name="common_red_press">#f25245</color>
     <!-- 白色 -->
     <color name="white">#ffffff</color>
     <!-- 黑色 -->
@@ -23,5 +26,10 @@
     <color name="listbg">#f0f0f0</color>
     <!-- 灰色 -->
     <color name="gray">#e7e7e7</color>
+
+    <!-- 股票数据模块背景色 -->
+    <color name="stock_bg">#1D2226</color>
+    <color name="stock_green">#3AB54A</color>
+
 
 </resources>

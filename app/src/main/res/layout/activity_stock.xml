@@ -9,16 +9,244 @@
         android:id="@+id/top_rl"
         layout="@layout/public_title_bar" />
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/listView_history"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/marge_80dp"
+        android:layout_marginTop="@dimen/marge_10dp"
+        android:background="@color/white"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/editTextGid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marge_10dp"
+            android:layout_marginRight="@dimen/marge_10dp"
+            android:paddingLeft="@dimen/marge_5dp"
+            android:background="@drawable/searchbg"
+            android:hint="@string/stock_gid_hint"
+            android:textColorHint="@color/common_text_gray_thin"
+            android:textColor="@color/common_text_gray_dark"
+            android:textSize="@dimen/font_size_15"
+            android:maxLength="20"
+            android:singleLine="true"
+            />
+        <ImageButton
+            android:id="@+id/buttonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/marge_10dp"
+            android:background="@drawable/icon_search" />
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/rg_parent"
-        android:layout_below="@+id/top_rl"
-        android:clickable="false"
-        android:divider="@null"
-        android:listSelector="@color/white"
-        android:scrollbars="none"
-        android:smoothScrollbar="true" />
+        android:layout_marginBottom="@dimen/marge_10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutShow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 基础数据 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/stock_bg"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/marge_100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/textViewNowPri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/font_size_30"
+                        android:textColor="@color/common_red_normal"
+                        android:text="--" />
+
+                    <LinearLayout
+                        android:layout_below="@+id/textViewNowPri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewIncrease"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/marge_20dp"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_red_normal"
+                            android:text="--" />
+
+                        <TextView
+                            android:id="@+id/textViewIncrePer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_red_normal"
+                            android:text="--" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/marge_100dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_marginRight="@dimen/marge_20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_text_gray_thin"
+                            android:text="今开"/>
+
+                        <TextView
+                            android:id="@+id/textViewTodayStartPri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/white"
+                            android:text="--"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_text_gray_thin"
+                            android:text="成交量"/>
+
+                        <TextView
+                            android:id="@+id/textViewTraNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/white"
+                            android:text="--"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_text_gray_thin"
+                            android:text="昨收"/>
+
+                        <TextView
+                            android:id="@+id/textViewYestodEndPri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/white"
+                            android:text="--"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/common_text_gray_thin"
+                            android:text="成交金额"/>
+
+                        <TextView
+                            android:id="@+id/textViewTraAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16"
+                            android:textColor="@color/white"
+                            android:text="--"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- K线图 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marge_10dp"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/common_text_gray_thin"
+                android:text="分时K线图"/>
+
+            <ImageView
+                android:id="@+id/imageViewMinurl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marge_10dp"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/common_text_gray_thin"
+                android:text="日K线图"/>
+
+            <ImageView
+                android:id="@+id/imageViewDayurl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marge_10dp"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/common_text_gray_thin"
+                android:text="周K线图"/>
+
+            <ImageView
+                android:id="@+id/imageViewWeekurl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marge_10dp"
+                android:textSize="@dimen/font_size_16"
+                android:textColor="@color/common_text_gray_thin"
+                android:text="月K线图"/>
+
+            <ImageView
+                android:id="@+id/imageViewMonthurl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
