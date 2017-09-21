@@ -8,6 +8,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.tencent.bugly.Bugly;
+import cn.jpush.android.api.JPushInterface;
 
 /**
  * 自定义 Application
@@ -29,6 +30,10 @@ public class BaseApplication extends Application {
         initImagLoader();
         // Bugly SDK初始化
         Bugly.init(getApplicationContext(), StaticData.BUGLY_APP_ID, false);//true:启动Debug，false：关闭Debug
+
+        //初始化推送组件
+        JPushInterface.setDebugMode(false); 	    // 设置开启日志,发布时请关闭日志
+        JPushInterface.init(getApplicationContext());  // 初始化 JPush
     }
 
     public static BaseApplication getContext() {

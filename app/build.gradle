@@ -10,7 +10,19 @@ android {
         versionCode 1000
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+            abiFilters "armeabi-v7a"
+        }
     }
+    //极光推送（必须配置：否则报 jpush 获取sdk版本失败 错误。详见：https://community.jiguang.cn/t/jpush-sdk/15777）
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -48,5 +60,6 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.0.0
     compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    compile 'com.android.support:cardview-v7:26.0.1'
 
 }

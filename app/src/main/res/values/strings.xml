@@ -29,6 +29,7 @@
     <string name="activity_horoscope">星座运势</string>
     <string name="activity_stock">股票数据</string>
     <string name="activity_qarobot">问答机器人</string>
+    <string name="activity_my_message">我的消息</string>
 
     <string name="news_tab0">头条</string>
     <string name="news_tab1">社会</string>
@@ -50,6 +51,8 @@
     <string name="no_more_data">无更多数据</string>
 
     <string name="stock_gid_hint">股票编号,深圳股市以sz开头,如:sz000001</string>
+    <string name="show_detail">查看详情</string>
+    <string name="jpush_message_content">\t\t\t\t您好！感谢使用本软件，如果使用中有体验不好地方，请反馈给我们，我们将逐步改善，谢谢！</string>
 
 
 </resources>

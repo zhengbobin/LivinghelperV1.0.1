@@ -1,5 +1,8 @@
 package com.boby.livinghelper.app.home;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,14 +33,14 @@ import com.boby.livinghelper.config.MainActityModuleType;
 import com.boby.livinghelper.config.StaticData;
 import com.boby.livinghelper.util.LogUtil;
 import com.boby.livinghelper.util.ToastUtil;
+import com.boby.livinghelper.util.jpush.JPushUtil;
+import com.boby.livinghelper.util.jpush.LocalBroadcastManager;
 import com.boby.livinghelper.util.network.HttpUtils;
 import com.boby.livinghelper.widget.LoadDialog;
 import com.boby.livinghelper.widget.MyGridView;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
-
 import java.util.ArrayList;
-
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -54,12 +57,27 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
     private LoadDialog loadDialog;
     private ArrayList<MainEntity> mainEntities;
 
+    //JPUSH
+    public static boolean isForeground = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
         initData();
+    }
+
+    @Override
+    protected void onResume() {
+        isForeground = true;
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        isForeground = false;
+        super.onPause();
     }
 
     @Override
@@ -88,6 +106,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
         gridView = (MyGridView) findViewById(R.id.gv_main);
         gridView.setOnItemClickListener(this);
         loadDialog = new LoadDialog(this);
+        //用于接收推送通知消息
+        registerMessageReceiver();
     }
 
     private void initData() {
@@ -245,4 +265,48 @@ public class MainActivity extends BaseActivity<MainPresenter> implements Adapter
             }
         });
     }
+
+    /**
+     * --------------- JPUSH -------------------
+     */
+    //for receive customer msg from jpush server
+    private MessageReceiver mMessageReceiver;
+    public static final String MESSAGE_RECEIVED_ACTION = "com.estate.chargingpile.MESSAGE_RECEIVED_ACTION";
+    public static final String KEY_TITLE = "title";
+    public static final String KEY_MESSAGE = "message";
+    public static final String KEY_EXTRAS = "extras";
+
+    public void registerMessageReceiver() {
+        mMessageReceiver = new MainActivity.MessageReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
+        filter.addAction(MESSAGE_RECEIVED_ACTION);
+        LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver, filter);
+    }
+
+    public class MessageReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            try {
+                if (MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
+                    String messge = intent.getStringExtra(KEY_MESSAGE);
+                    String extras = intent.getStringExtra(KEY_EXTRAS);
+                    StringBuilder showMsg = new StringBuilder();
+                    showMsg.append(KEY_MESSAGE + " : " + messge + "\n");
+                    if (!JPushUtil.isEmpty(extras)) {
+                        showMsg.append(KEY_EXTRAS + " : " + extras + "\n");
+                    }
+                    setCostomMsg(showMsg.toString());
+                }
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    private void setCostomMsg(String msg) {
+        LogUtil.e("推送消息：", msg + "");
+        ToastUtil.showMessage(MainActivity.this, "推送消息：" + ": " + msg + "");
+    }
+
 }
